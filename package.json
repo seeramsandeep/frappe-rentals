@@ -1,7 +1,7 @@
 {
   "name": "rentals",
   "version": "1.0.0",
-  "description": "Manage rentals in frappe",
+  "description": "Manage Rentals in Frappe",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
