@@ -103,7 +103,8 @@ app_license = "mit"
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+	# "Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+    # "Vehicle":"rentals.api.get_query_conditions_for_vehicle",
 # }
 #
 # has_permission = {
@@ -133,7 +134,7 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"rentals.tasks.all"
 # 	],
@@ -149,7 +150,13 @@ app_license = "mit"
 # 	"monthly": [
 # 		"rentals.tasks.monthly"
 # 	],
-# }
+    "Cron": {
+        "30 15 * * 3":[
+            "rentals.api.send_payment_remainders"
+        ]
+    }
+
+}
 
 # Testing
 # -------
@@ -227,3 +234,5 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+website_route_rules = [{'from_route': '/portal/<path:app_path>', 'to_route': 'portal'},]

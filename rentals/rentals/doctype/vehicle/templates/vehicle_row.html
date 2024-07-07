@@ -1,0 +1,63 @@
+<!-- <img src="{{ doc.vehicle_image }}" alt="{{ doc.title }}" /> -->
+<!-- <div>
+	<a href="{{ doc.route }}">{{ doc.title or doc.name }}</a>
+</div> -->
+<!-- this is a sample default list template -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Layout</title>
+    <style>
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 26px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+			width: calc(50% - 20px);
+            display: flex;
+            margin: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .card img {
+            width: 100%;
+            height: auto;
+            mix-blend-mode: multiply; /* Apply mix-blend-mode to the image */
+        }
+        
+        .card-content {
+            padding: 26px;
+            text-align: center;
+        }
+        
+        .card-content a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold; /* Optional: Make the link text bold */
+        }
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="card">
+		<img src="{{ doc.vehicle_image }}" alt="{{ doc.title }}">
+		<div class="card-content">
+			<a href="{{ doc.route }}">{{ doc.title or doc.name }}</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

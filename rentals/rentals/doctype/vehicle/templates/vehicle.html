@@ -1,0 +1,26 @@
+{% extends "templates/web.html" %}
+{% block page_content %}
+    <style>
+        .image-container {
+            mix-blend-mode: multiply;
+        }
+    </style>
+    <h1>{{ title }}</h1>
+    <h2>Color: {{ doc.color }}</h2>
+
+    {% if doc.vehicle_image %}
+        <a class="btn btn-md btn-info" href="/book-a-ride/new?vehicle={{ doc.name }}">Book Ride</a>
+        <div class="image-container" style="text-align: center;">
+            <img src="{{ doc.vehicle_image }}" alt="{{ doc.title }}" style="max-width: 100%; height: auto; background-color: transparent;">
+        </div>
+    {% else %}
+        <span>No Image Available</span>
+    {% endif %}
+{% endblock %}
+
+
+<!-- this is a sample default web page template -->
+
+<!-- <h1>Hello From Vehicle.html</h1>
+
+<h2>{{doc.title}}</h2> -->
