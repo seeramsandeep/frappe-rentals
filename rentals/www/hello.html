@@ -1,16 +1,61 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/rentals/css/hello.css">
-</head>
-<body>
-    <h1>Hello Guys...</h1>
-    <span>I'm {{ my_name }}</span>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome to Rental Cabs</title>
+    <link rel="stylesheet" href="/assets/rentals/css/hello.css" />
+    <style>
+      body {
+        background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+      }
+      .welcome-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      .welcome-content {
+        padding: 40px;
+        border-radius: 10px;
+        text-align: center;
+      }
+      .welcome-text {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #0062e6;
+      }
+      .lead-text {
+        font-size: 1.25rem;
+        color: #555;
+      }
+      .btn-custom {
+        background-color: #0062e6;
+        border: none;
+        color: white;
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        border-radius: 50px;
+        transition: background-color 0.3s;
+      }
+      .btn-custom:hover {
+        background-color: #004bb5;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container welcome-container">
+      <div class="welcome-content">
+        <h1 class="welcome-text">Welcome to Rental Cabs</h1>
+        <p class="lead lead-text">
+          The best place to rent your favorite cars at affordable prices.</p>
+        <span class="d-block mb-4">Hello {{ my_name }}</span><br /><br />
+        <a href="/cars" class="btn btn-custom">Get Started</a>
+      </div>
+    </div>
+  </body>
 </html>

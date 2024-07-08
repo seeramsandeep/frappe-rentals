@@ -4,11 +4,12 @@
  "allow_import": 1,
  "autoname": "autoincrement",
  "creation": "2024-07-04 14:51:43.619743",
- "default_view": "List",
+ "default_view": "Image",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "title",
+  "type",
   "make",
   "year",
   "color",
@@ -119,14 +120,21 @@
    "fieldtype": "Check",
    "label": "Audit Completed ?",
    "permlevel": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Vehicle Type"
   }
  ],
+ "force_re_route_to_default_view": 1,
  "has_web_view": 1,
  "image_field": "vehicle_image",
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2024-07-07 01:05:03.003966",
+ "modified": "2024-07-08 11:00:09.799315",
  "modified_by": "Administrator",
  "module": "Rentals",
  "name": "Vehicle",
@@ -183,6 +191,7 @@
   }
  ],
  "route": "cars",
+ "search_fields": "make, model",
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

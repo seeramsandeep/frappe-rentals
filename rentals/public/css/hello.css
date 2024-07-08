@@ -1,4 +1,40 @@
-html{
-    background-color: rgb(247, 0, 255);
+body {
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+.welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.welcome-content {
+    padding: 40px;
+    border-radius: 10px;
     text-align: center;
+}
+.welcome-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0062E6;
+}
+.lead-text {
+    font-size: 1.25rem;
+    color: #555;
+}
+.btn-custom {
+    background-color: #0062E6;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+.btn-custom:hover {
+    background-color: #004bb5;
+}
+a{
+    text-decoration: none;
 }
